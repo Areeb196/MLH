@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Super Shopper</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Super Shopper</h1>
+      <p>Welcome to Super-Shopper, enter your shopping list below.</p>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <select id="item-type-selector" class="custom-select">
+            <option value="other" selected>Select the item category</option>
+            <option value="dairy">Dairy</option>
+            <option value="bakery">Bakery</option>
+            <option value="shoes">Shoes</option>
+            <option value="sporting-goods">Sporting Goods</option>
+            <option value="toys">Toys</option>
+            <option value="health">Health</option>
+            <option value="housewares">Housewares</option>
+            <option value="boys-wear">Boys Wear</option>
+            <option value="ladies-wear">Ladies Wear</option>
+            <option value="intimates">Intimates</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Item name" id="item-name">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" id="add-item">Add to List</button>
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-group" id="shopping-list">
+    </ul>
+    <form method="get" action="/submit">
+      <input type="hidden" name="list" value="">
+
+      <input type="submit" class="btn btn-primary" value="Find Path">
+    </form>
+  </div>
+  <script src="./js/index.js" charset="utf-8"></script>
+</body>
+</html>
